@@ -103,42 +103,9 @@ nav a:hover{
 color:white;
 }
 
-.header-buttons{
-
-display:flex;
-gap:14px;
-
-}
-
 /* =========================
-BUTTONS
+PREMIUM BUTTON
 ========================= */
-
-.login-btn{
-
-padding:11px 18px;
-
-border-radius:14px;
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.06);
-
-color:white;
-
-text-decoration:none;
-
-font-size:14px;
-
-transition:.3s;
-
-}
-
-.login-btn:hover{
-
-background:rgba(255,255,255,.08);
-
-}
 
 .premium-btn{
 
@@ -290,22 +257,6 @@ transform:translateY(-4px);
 
 }
 
-.hero-secondary-btn{
-
-padding:16px 28px;
-
-border-radius:16px;
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.08);
-
-color:white;
-
-text-decoration:none;
-
-}
-
 .hero-image img{
 
 width:min(360px,85vw);
@@ -405,216 +356,6 @@ line-height:1.8;
 }
 
 /* =========================
-FEED
-========================= */
-
-.feed{
-
-display:flex;
-flex-direction:column;
-gap:34px;
-
-}
-
-.post{
-
-background:rgba(17,24,39,.7);
-
-border:1px solid rgba(255,255,255,.06);
-
-border-radius:28px;
-
-overflow:hidden;
-
-}
-
-.post video,
-.post img{
-
-width:100%;
-
-display:block;
-
-max-height:720px;
-
-object-fit:cover;
-
-background:black;
-
-}
-
-.post-content{
-
-padding:24px;
-
-}
-
-.post-top{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-margin-bottom:18px;
-
-}
-
-.post-user{
-
-display:flex;
-align-items:center;
-gap:14px;
-
-}
-
-.avatar{
-
-width:48px;
-height:48px;
-
-border-radius:50%;
-
-background:#1e293b;
-
-}
-
-.post-user h4{
-
-font-size:16px;
-
-}
-
-.post-user span{
-
-font-size:13px;
-
-color:#94a3b8;
-
-}
-
-.premium-tag{
-
-padding:8px 14px;
-
-border-radius:999px;
-
-background:rgba(255,215,0,.08);
-
-border:1px solid rgba(255,215,0,.18);
-
-font-size:12px;
-
-color:#fcd34d;
-
-}
-
-.post-text{
-
-margin-bottom:22px;
-
-line-height:1.8;
-
-color:#cbd5e1;
-
-}
-
-.post-actions{
-
-display:flex;
-
-gap:26px;
-
-margin-bottom:22px;
-
-}
-
-.action{
-
-display:flex;
-align-items:center;
-gap:8px;
-
-cursor:pointer;
-
-color:#cbd5e1;
-
-transition:.2s;
-
-}
-
-.action:hover{
-
-color:white;
-
-}
-
-.comments{
-
-padding-top:18px;
-
-border-top:1px solid rgba(255,255,255,.06);
-
-}
-
-.comment-box{
-
-margin-top:16px;
-
-padding:16px;
-
-border-radius:16px;
-
-background:rgba(255,255,255,.03);
-
-color:#94a3b8;
-
-}
-
-/* =========================
-PREMIUM FEED LOCK
-========================= */
-
-.locked-overlay{
-
-position:absolute;
-
-inset:0;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-background:rgba(0,0,0,.55);
-
-backdrop-filter:blur(10px);
-
-}
-
-.locked-overlay-content{
-
-text-align:center;
-
-padding:30px;
-
-}
-
-.locked-overlay h3{
-
-font-size:30px;
-
-margin-bottom:14px;
-
-}
-
-.locked-overlay p{
-
-color:#cbd5e1;
-
-margin-bottom:22px;
-
-}
-
-/* =========================
 MODAL
 ========================= */
 
@@ -674,53 +415,8 @@ margin-bottom:28px;
 
 }
 
-.input-group{
-
-margin-bottom:18px;
-
-}
-
-.input-group input{
-
-width:100%;
-
-padding:16px;
-
-border-radius:14px;
-
-border:1px solid rgba(255,255,255,.06);
-
-background:#111827;
-
-color:white;
-
-outline:none;
-
-}
-
-.submit-btn{
-
-width:100%;
-
-padding:16px;
-
-border:none;
-
-border-radius:16px;
-
-background:
-linear-gradient(135deg,#38bdf8,#0ea5e9);
-
-color:white;
-
-font-weight:600;
-
-cursor:pointer;
-
-}
-
 /* =========================
-PREMIUM MODAL
+PLAN
 ========================= */
 
 .plan{
@@ -886,12 +582,6 @@ text-align:center;
 
 }
 
-.post-actions{
-
-flex-wrap:wrap;
-
-}
-
 }
 
 </style>
@@ -916,25 +606,11 @@ BRUNO JAU
 Sobre
 </a>
 
-<a href="#feed">
-Feed
-</a>
-
 <a href="#contacto">
 Contacto
 </a>
 
 </nav>
-
-<div class="header-buttons">
-
-<a href="#"
-class="login-btn"
-onclick="openLoginModal()">
-
-Login
-
-</a>
 
 <a href="#"
 class="premium-btn"
@@ -943,8 +619,6 @@ onclick="openPremiumModal()">
 ✦ PREMIUM
 
 </a>
-
-</div>
 
 </header>
 
@@ -962,40 +636,19 @@ Premium Content Platform
 
 <h1>
 
-Operações.<br>
-Conteúdo.<br>
-Tecnologia.
+VERSATILIDADE
 
 </h1>
 
 <p>
 
 Plataforma premium focada em vídeos,
-fotos, conteúdo exclusivo e comunidade privada.
-Experiência moderna inspirada em apps premium e social media.
+fotos e conteúdo exclusivo.
+Experiência moderna inspirada em apps premium e creator platforms.
 
 </p>
 
-<div class="hero-buttons">
-
-<a href="#feed"
-class="hero-main-btn">
-
-Explorar Feed
-
-</a>
-
-<a href="#"
-class="hero-secondary-btn"
-onclick="openPremiumModal()">
-
-Ver Premium
-
-</a>
-
-</div>
-
-</div>
+<div class="hero-buttons"></div>
 
 <div class="hero-image">
 
@@ -1036,13 +689,13 @@ e conteúdo exclusivo para membros.
 <div class="card">
 
 <h3>
-Comunidade
+Creator Platform
 </h3>
 
 <p>
 
-Sistema de likes,
-comentários e interação premium.
+Estrutura premium preparada
+para monetização e comunidade privada.
 
 </p>
 
@@ -1057,134 +710,9 @@ Experiência Mobile
 <p>
 
 Interface moderna otimizada para iPhone,
-fullscreen video e feed estilo app.
+fullscreen video e experiência estilo app.
 
 </p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-FEED
-========================= -->
-
-<section id="feed">
-
-<h2 class="section-title">
-Feed
-</h2>
-
-<div class="feed">
-
-<!-- POST FREE -->
-
-<div class="post">
-
-<img src="foto.jpg.jpeg" alt="Post">
-
-<div class="post-content">
-
-<div class="post-top">
-
-<div class="post-user">
-
-<div class="avatar"></div>
-
-<div>
-
-<h4>
-Bruno Jau
-</h4>
-
-<span>
-Hoje
-</span>
-
-</div>
-
-</div>
-
-<div class="premium-tag">
-FREE
-</div>
-
-</div>
-
-<div class="post-text">
-
-Conteúdo gratuito disponível para todos os visitantes da plataforma.
-
-</div>
-
-<div class="post-actions">
-
-<div class="action"
-onclick="incrementLikes('likes1')">
-
-❤️
-<span id="likes1">
-87
-</span>
-
-</div>
-
-<div class="action">
-
-💬 12 comentários
-
-</div>
-
-<div class="action">
-
-🔖 Guardar
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- POST PREMIUM -->
-
-<div class="post"
-style="position:relative;">
-
-<video controls>
-
-<source src="video.mp4" type="video/mp4">
-
-</video>
-
-<div class="locked-overlay">
-
-<div class="locked-overlay-content">
-
-<h3>
-🔒 Premium
-</h3>
-
-<p>
-
-Apenas membros premium podem visualizar este conteúdo.
-
-</p>
-
-<a href="#"
-class="plan-btn"
-onclick="openPremiumModal()">
-
-Desbloquear
-
-</a>
-
-</div>
-
-</div>
 
 </div>
 
@@ -1258,49 +786,6 @@ FOOTER
 </footer>
 
 <!-- =========================
-LOGIN MODAL
-========================= -->
-
-<div class="modal"
-id="loginModal">
-
-<div class="modal-box">
-
-<h2>
-Entrar
-</h2>
-
-<p>
-
-Acede ao conteúdo premium da plataforma.
-
-</p>
-
-<div class="input-group">
-
-<input type="email"
-placeholder="Email">
-
-</div>
-
-<div class="input-group">
-
-<input type="password"
-placeholder="Password">
-
-</div>
-
-<button class="submit-btn">
-
-Login
-
-</button>
-
-</div>
-
-</div>
-
-<!-- =========================
 PREMIUM MODAL
 ========================= -->
 
@@ -1316,9 +801,8 @@ id="premiumModal">
 <p>
 
 Desbloqueia conteúdo exclusivo,
-vídeos privados,
-comentários premium
-e acesso completo à plataforma.
+vídeos privados
+e acesso premium à plataforma.
 
 </p>
 
@@ -1344,19 +828,19 @@ Premium
 </li>
 
 <li>
-✓ Vídeos Fullscreen
+✓ Vídeos Premium
 </li>
 
 <li>
-✓ Comentários Premium
+✓ Acesso Privado
 </li>
 
 <li>
-✓ Feed Privado
+✓ Conteúdo Fullscreen
 </li>
 
 <li>
-✓ Comunidade Exclusiva
+✓ Plataforma Premium
 </li>
 
 </ul>
@@ -1383,18 +867,6 @@ SCRIPTS
 
 <script>
 
-/* =========================
-MODALS
-========================= */
-
-function openLoginModal(){
-
-document
-.getElementById("loginModal")
-.classList.add("active");
-
-}
-
 function openPremiumModal(){
 
 document
@@ -1405,40 +877,14 @@ document
 
 window.onclick=function(e){
 
-const loginModal=
-document.getElementById("loginModal");
-
 const premiumModal=
 document.getElementById("premiumModal");
-
-if(e.target===loginModal){
-
-loginModal.classList.remove("active");
-
-}
 
 if(e.target===premiumModal){
 
 premiumModal.classList.remove("active");
 
 }
-
-}
-
-/* =========================
-LIKES
-========================= */
-
-function incrementLikes(id){
-
-let element=
-document.getElementById(id);
-
-let current=
-parseInt(element.innerText);
-
-element.innerText=
-current + 1;
 
 }
 
