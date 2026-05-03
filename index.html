@@ -1,160 +1,587 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BRUNO JAU | Premium Platform</title>
 
+<meta name="theme-color" content="#020617">
+
+<meta name="description"
+content="Bruno Jau Premium Platform">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
+/* =========================
+RESET
+========================= */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Inter',sans-serif;
-background: radial-gradient(circle at top left,#111827 0%,#050816 40%,#020617 100%);
+
+background:
+radial-gradient(circle at top left,#111827 0%,#050816 40%,#020617 100%);
+
 color:#f1f5f9;
+
 overflow-x:hidden;
 }
 
-/* HEADER */
+/* =========================
+HEADER
+========================= */
+
 header{
+
 position:fixed;
+
 top:0;
 width:100%;
+
 padding:18px 8%;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
+
 background:rgba(15,23,42,0.65);
+
 backdrop-filter:blur(18px);
+
 border-bottom:1px solid rgba(255,255,255,.06);
+
 z-index:999;
+
 }
 
 .logo{
+
 font-size:22px;
 font-weight:800;
 letter-spacing:2px;
+
 }
 
 nav{
+
 display:flex;
 gap:28px;
+
 }
 
 nav a{
+
 text-decoration:none;
+
 color:#cbd5e1;
+
 font-size:15px;
 font-weight:500;
+
+transition:.3s;
+
 }
 
 nav a:hover{
 color:white;
 }
 
-/* PREMIUM BUTTON */
+/* =========================
+PREMIUM BUTTON
+========================= */
+
 .premium-btn{
+
 padding:12px 22px;
+
 border-radius:14px;
+
 text-decoration:none;
+
 font-size:14px;
 font-weight:700;
+letter-spacing:.5px;
+
 color:#fef3c7;
-background:linear-gradient(135deg,rgba(255,215,0,.18),rgba(255,180,0,.08));
+
+background:
+linear-gradient(
+135deg,
+rgba(255,215,0,.18),
+rgba(255,180,0,.08)
+);
+
 border:1px solid rgba(255,215,0,.45);
-box-shadow:0 0 18px rgba(255,215,0,.12);
+
+box-shadow:
+0 0 18px rgba(255,215,0,.12);
+
+transition:.35s;
+
 }
 
-/* HERO */
+.premium-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 0 28px rgba(255,215,0,.22);
+
+border-color:
+rgba(255,215,0,.75);
+
+}
+
+/* =========================
+HERO
+========================= */
+
 .hero{
+
 min-height:100vh;
+
 display:flex;
 align-items:center;
 justify-content:space-between;
+
 padding:140px 8%;
+
 gap:80px;
+
+}
+
+.hero-text{
+
+max-width:700px;
+
+}
+
+.hero-text span{
+
+display:inline-block;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+background:rgba(56,189,248,.08);
+
+border:1px solid rgba(56,189,248,.15);
+
+color:#38bdf8;
+
+font-size:14px;
+
+margin-bottom:25px;
+
 }
 
 .hero-text h1{
-font-size:70px;
+
+font-size:clamp(48px,8vw,90px);
+
+line-height:.95;
+
+letter-spacing:-4px;
+
+margin-bottom:28px;
+
 font-weight:900;
-letter-spacing:-2px;
+
 }
 
 .hero-text p{
+
+font-size:18px;
+
+line-height:1.8;
+
 color:#94a3b8;
-margin-top:20px;
-max-width:600px;
+
+max-width:620px;
+
+margin-bottom:35px;
+
 }
 
-/* SECTIONS */
+.hero-buttons{
+
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+
+}
+
+.hero-main-btn{
+
+padding:16px 28px;
+
+border-radius:16px;
+
+background:
+linear-gradient(135deg,#38bdf8,#0ea5e9);
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+box-shadow:
+0 14px 40px rgba(56,189,248,.25);
+
+transition:.3s;
+
+}
+
+.hero-main-btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+.hero-image img{
+
+width:min(360px,85vw);
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 40px 80px rgba(0,0,0,.55),
+0 0 60px rgba(56,189,248,.08);
+
+}
+
+/* =========================
+SECTIONS
+========================= */
+
 section{
-padding:100px 8%;
+
+padding:110px 8%;
+
 }
 
 .section-title{
-font-size:40px;
-margin-bottom:40px;
+
+font-size:clamp(32px,5vw,52px);
+
+margin-bottom:60px;
+
 font-weight:800;
+
+letter-spacing:-2px;
+
 }
 
-/* GRID */
+/* =========================
+GRID
+========================= */
+
 .grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
 gap:26px;
+
 }
 
-/* CARD */
+/* =========================
+CARDS
+========================= */
+
 .card{
+
 background:rgba(17,24,39,.65);
+
 border:1px solid rgba(255,255,255,.06);
+
+backdrop-filter:blur(12px);
+
 padding:28px;
+
 border-radius:24px;
+
+transition:.35s;
+
 }
 
-/* MODAL */
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:rgba(56,189,248,.35);
+
+box-shadow:
+0 14px 40px rgba(56,189,248,.10);
+
+}
+
+.card h3{
+
+font-size:22px;
+
+margin-bottom:14px;
+
+}
+
+.card p{
+
+color:#94a3b8;
+
+line-height:1.8;
+
+}
+
+/* =========================
+MODAL
+========================= */
+
 .modal{
+
 position:fixed;
+
 inset:0;
+
 background:rgba(0,0,0,.75);
+
 display:none;
+
 justify-content:center;
 align-items:center;
+
+padding:20px;
+
+z-index:9999;
+
 }
 
 .modal.active{
+
 display:flex;
+
 }
 
 .modal-box{
-background:#0f172a;
-padding:40px;
-border-radius:28px;
-max-width:420px;
+
 width:100%;
+max-width:460px;
+
+background:#0f172a;
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:40px;
+
+border-radius:28px;
+
 }
 
-/* PLAN */
+.modal-box h2{
+
+font-size:34px;
+
+margin-bottom:12px;
+
+}
+
+.modal-box p{
+
+color:#94a3b8;
+
+margin-bottom:28px;
+
+}
+
+/* =========================
+PLAN
+========================= */
+
+.plan{
+
+background:rgba(17,24,39,.7);
+
+border:1px solid rgba(255,215,0,.25);
+
+padding:34px;
+
+border-radius:26px;
+
+margin-top:10px;
+
+}
+
+.plan h3{
+
+font-size:30px;
+
+margin-bottom:12px;
+
+}
+
+.price{
+
+font-size:58px;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+.price span{
+
+font-size:16px;
+
+color:#94a3b8;
+
+}
+
+.plan ul{
+
+list-style:none;
+
+margin-bottom:28px;
+
+}
+
+.plan ul li{
+
+margin-bottom:14px;
+
+color:#cbd5e1;
+
+}
+
 .plan-btn{
+
 display:block;
+
 text-align:center;
+
 padding:16px;
+
 border-radius:16px;
-background:linear-gradient(135deg,#facc15,#f59e0b);
-color:#111827;
-font-weight:700;
+
+background:
+linear-gradient(135deg,#facc15,#f59e0b);
+
 text-decoration:none;
+
+color:#111827;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.plan-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+color:#64748b;
+
+border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+header{
+
+padding:16px 6%;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+nav{
+
+gap:18px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+padding-top:180px;
+
+gap:40px;
+
+}
+
+.hero-text p{
+
+font-size:15px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+section{
+
+padding:90px 6%;
+
+}
+
+.section-title{
+
+text-align:center;
+
+}
+
 }
 
 </style>
@@ -163,78 +590,272 @@ text-decoration:none;
 
 <body>
 
+<!-- =========================
+HEADER
+========================= -->
+
 <header>
 
-<div class="logo">BRUNO JAU</div>
+<div class="logo">
+BRUNO JAU
+</div>
 
 <nav>
-<a href="#sobre">Sobre</a>
-<a href="#contacto">Contacto</a>
+
+<a href="#sobre">
+Sobre
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
 </nav>
 
-<a class="premium-btn" href="#" onclick="openPremium()">
+<a href="#"
+class="premium-btn"
+onclick="openPremiumModal()">
+
 ✦ PREMIUM
+
 </a>
 
 </header>
 
+<!-- =========================
+HERO
+========================= -->
+
 <section class="hero" id="sobre">
 
-<div>
+<div class="hero-text">
 
-<h1>VERSATILIDADE</h1>
+<span>
+Premium Content Platform
+</span>
+
+<h1>
+
+VERSATILIDADE
+
+</h1>
 
 <p>
-Plataforma premium de conteúdo exclusivo.
+
+Plataforma premium focada em vídeos,
+fotos e conteúdo exclusivo.
+Experiência moderna inspirada em apps premium e creator platforms.
+
 </p>
+
+<div class="hero-buttons"></div>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="foto.jpg.jpeg" alt="Bruno Jau">
 
 </div>
 
 </section>
 
+<!-- =========================
+FEATURES
+========================= -->
+
 <section>
 
-<h2 class="section-title">Plataforma</h2>
+<h2 class="section-title">
+Plataforma
+</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Conteúdo Exclusivo</h3>
-<p>Vídeos e fotos premium.</p>
+
+<h3>
+Conteúdo Exclusivo
+</h3>
+
+<p>
+
+Vídeos premium,
+posts privados
+e conteúdo exclusivo para membros.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Creator Platform</h3>
-<p>Monetização e comunidade.</p>
+
+<h3>
+Creator Platform
+</h3>
+
+<p>
+
+Estrutura premium preparada
+para monetização e comunidade privada.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Experiência Mobile
+</h3>
+
+<p>
+
+Interface moderna otimizada para iPhone,
+fullscreen video e experiência estilo app.
+
+</p>
+
 </div>
 
 </div>
 
 </section>
+
+<!-- =========================
+CONTACT
+========================= -->
 
 <section id="contacto">
 
-<h2 class="section-title">Contacto</h2>
+<h2 class="section-title">
+Contacto
+</h2>
 
-<p>email@profissional.com</p>
+<div class="grid">
+
+<div class="card">
+
+<h3>
+Email
+</h3>
+
+<p>
+email@profissional.com
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Localização
+</h3>
+
+<p>
+Lisboa, Portugal
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Disponibilidade
+</h3>
+
+<p>
+
+Disponível para projetos,
+parcerias e colaborações.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
 
+<!-- =========================
+FOOTER
+========================= -->
+
 <footer>
+
 © 2026 — BRUNO JAU
+
 </footer>
 
-<div class="modal" id="premium">
+<!-- =========================
+PREMIUM MODAL
+========================= -->
+
+<div class="modal"
+id="premiumModal">
 
 <div class="modal-box">
 
-<h2>Premium</h2>
+<h2>
+✦ Premium Access
+</h2>
 
-<p>Ativa o acesso exclusivo.</p>
+<p>
 
-<a class="plan-btn"
-href="https://buy.stripe.com/SEU_LINK"
-target="_blank">
+Desbloqueia conteúdo exclusivo,
+vídeos privados
+e acesso premium à plataforma.
+
+</p>
+
+<div class="plan">
+
+<h3>
+Premium
+</h3>
+
+<div class="price">
+
+9€
+<span>
+/mês
+</span>
+
+</div>
+
+<ul>
+
+<li>
+✓ Conteúdo Exclusivo
+</li>
+
+<li>
+✓ Vídeos Premium
+</li>
+
+<li>
+✓ Acesso Privado
+</li>
+
+<li>
+✓ Conteúdo Fullscreen
+</li>
+
+<li>
+✓ Plataforma Premium
+</li>
+
+</ul>
+
+<!-- STRIPE LINK -->
+
+<a href="https://buy.stripe.com/SEU_LINK_AQUI"
+target="_blank"
+class="plan-btn">
 
 Ativar Premium
 
@@ -244,15 +865,33 @@ Ativar Premium
 
 </div>
 
+</div>
+
+<!-- =========================
+SCRIPTS
+========================= -->
+
 <script>
 
-function openPremium(){
-document.getElementById("premium").classList.add("active");
+function openPremiumModal(){
+
+document
+.getElementById("premiumModal")
+.classList.add("active");
+
 }
 
 window.onclick=function(e){
-let modal=document.getElementById("premium");
-if(e.target===modal) modal.classList.remove("active");
+
+const premiumModal=
+document.getElementById("premiumModal");
+
+if(e.target===premiumModal){
+
+premiumModal.classList.remove("active");
+
+}
+
 }
 
 </script>
